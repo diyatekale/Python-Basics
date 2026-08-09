@@ -1,0 +1,567 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "8df3a23c-4b36-41b5-abee-c715f8d7a4f1",
+   "metadata": {},
+   "source": [
+    "Accpet the registration number of a vehicle as input and print it's state -code as output"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "63890f9f-64f3-4162-9aaf-28dc528c2c59",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter vehicle registration number:  MH12AB1234 \n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "State-code: MH\n"
+     ]
+    }
+   ],
+   "source": [
+    "registration = input(\"Enter vehicle registration number: \")\n",
+    "\n",
+    "state_code = registration[:2]\n",
+    "\n",
+    "print(\"State-code:\", state_code)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e50d83c6-7b45-4bdf-8713-aeaa378deabe",
+   "metadata": {},
+   "source": [
+    "Accept five words as input and print the sentence formed by these\n",
+    "words after a space between consecutive words and a full stop at the end."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "e96c12f3-7291-424b-932b-c6f0211b7836",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter word:  python\n",
+      "Enter word:  is\n",
+      "Enter word:  a\n",
+      "Enter word:  simple\n",
+      "Enter word:  sentence\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "python is a simple sentence.\n"
+     ]
+    }
+   ],
+   "source": [
+    "words = []\n",
+    "\n",
+    "for i in range(5):\n",
+    "    words.append(input(\"Enter word: \"))\n",
+    "\n",
+    "sentence = \" \".join(words) + \".\"\n",
+    "\n",
+    "print(sentence)\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "23cb9a03-2e23-43c0-9fde-46bb6c1acbfd",
+   "metadata": {},
+   "source": [
+    "Accept the date in DD-MM-YYYY format as input and print the s input."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "3fa811a1-35e0-4025-838c-4cc37b678c09",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter date (DD-MM-YYYY):  10-03-2005\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Year: 2005\n"
+     ]
+    }
+   ],
+   "source": [
+    "date = input(\"Enter date (DD-MM-YYYY): \")\n",
+    "\n",
+    "year = date[6:10]\n",
+    "\n",
+    "print(\"Year:\", year)\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "b0a0971f-72d5-4dd0-8715-0eb04d1e5012",
+   "metadata": {},
+   "source": [
+    "Accept a sequence of five single digit numbers seperated by commas as input.print the product of all five numbers."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "7d5b53de-18c1-4f15-9857-69324c70650d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter five digits separated by commas:  55,63,47,81,10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Product: 131912550\n"
+     ]
+    }
+   ],
+   "source": [
+    "numbers = input(\"Enter five digits separated by commas: \")\n",
+    "\n",
+    "numbers = numbers.split(\",\")\n",
+    "\n",
+    "product = 1\n",
+    "\n",
+    "for num in numbers:\n",
+    "    product *= int(num)\n",
+    "\n",
+    "print(\"Product:\", product)\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "a49399d6-e9c3-41cb-bf7e-d68e5bbcacd4",
+   "metadata": {},
+   "source": [
+    "Accept a number and print \"Positive\" if it is greater than 0,otherwise print \"Not Positive\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "0093f0ad-4a1d-45c3-aaa1-b181c2b2e9e5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  -5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Not Positive\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = int(input(\"Enter a number: \"))\n",
+    "\n",
+    "if num > 0:\n",
+    "    print(\"Positive\")\n",
+    "else:\n",
+    "    print(\"Not Positive\")\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "42a287cc-dee8-4f77-a808-2e507f13caea",
+   "metadata": {},
+   "source": [
+    "Accept a number and print \"even\" if it is divisible by 2,otherwise print \"odd\".\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "4ec58af7-93f3-4438-9e05-02f1118df0e6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  87\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Odd\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = int(input(\"Enter a number: \"))\n",
+    "\n",
+    "if num % 2 == 0:\n",
+    "    print(\"Even\")\n",
+    "else:\n",
+    "    print(\"Odd\")\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "7d322ab2-f222-406d-b6f2-c1f46fe2774a",
+   "metadata": {},
+   "source": [
+    "Accept a number aand print \"pass\" if the number is 35or above,otherwise print \"Fail\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "e39c760e-8cc5-43a0-8cd2-3a562817e2e8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number: 45\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "pass\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = int(input(\"Enter a number:\"))\n",
+    "\n",
+    "if num>=35:\n",
+    "    print(\"pass\")\n",
+    "else:\n",
+    "    print(\"Fail\")"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "fd497513-1cf7-4f3a-84d5-b84761a25e20",
+   "metadata": {},
+   "source": [
+    "Accept a number, if it is divisible by 3 and 5 ,print \"Fizzbuzz\" ,otherwise print \"Not Frizzbuzz\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "42b0bbef-af16-4f26-89a9-5db069abcb6a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number: 34\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Not Frizzbuzz\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = int(input(\"Enter a number:\"))\n",
+    "\n",
+    "if num%3== 0 and num %5 == 0:\n",
+    "    print(\"Frizzbuzz\")\n",
+    "else:\n",
+    "    print(\"Not Frizzbuzz\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "432f8cc8-f714-48c4-accd-eb7cb6932be2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Accept a shopping amount ,if it is ₹ 2000 or more,print \"Cashback Available\" ,otherwise Print \"No Cashback\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "f4d8aaa8-747c-41f8-a39c-f44455215fbc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter shopping amount: ₹ 30000\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Cashback Available\n"
+     ]
+    }
+   ],
+   "source": [
+    "amount = float(input(\"Enter shopping amount: ₹\"))\n",
+    "\n",
+    "if amount >= 2000:\n",
+    "    print(\"Cashback Available\")\n",
+    "else:\n",
+    "    print(\"No Cashback\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "46b72ba7-a67d-4145-93ad-84aa7ff7660b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Accept a password length ,if it is 8 or more,print \"Strong Password\" ,otherwise print \"Weak Password\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "a29894f4-0f67-481f-8091-ebf9dd6f2297",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter password length:  7\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Weak Password\n"
+     ]
+    }
+   ],
+   "source": [
+    "length = int(input(\"Enter password length: \"))\n",
+    "\n",
+    "if length >= 8:\n",
+    "    print(\"Strong Password\")\n",
+    "else:\n",
+    "    print(\"Weak Password\")"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "69f90d1e-cabf-4904-bd5c-48fa1d6e7b8b",
+   "metadata": {},
+   "source": [
+    "l = [3,4,5,6,7,  [23,456,67,8,78,78] , [345,56,87,8,98,9],(234,6657,6), {\"key1\" : \"sudh\",234:[23,45,656]}]\n",
+    "\n",
+    "-try to access 234 out of this list\n",
+    "-try to access 456\n",
+    "-try to extract only  a list collection from list 1\n",
+    "-try to extract \"sudh\"\n",
+    "-try to list all the key in dict element available in list\n",
+    "-try to extract all the value element from dict avaliable in list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "67bd7472-1f22-4422-b788-213e511e0d87",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "l = [3, 4, 5, 6, 7,\n",
+    "     [23, 456, 67, 8, 78, 78],\n",
+    "     [345, 56, 87, 8, 98, 9],\n",
+    "     (234, 6657, 6),\n",
+    "     {\"key1\": \"sudh\", 234: [23, 45, 656]}]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "2cf562d6-fbe1-46f2-a3a3-3b803204c775",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "234\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(l[7][0])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "062e3388-2bc5-43f6-9411-7f2b115ed4db",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "456\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(l[5][1])\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "813d8b1f-d945-4185-93eb-3589f514aa9b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[23, 456, 67, 8, 78, 78]\n",
+      "[345, 56, 87, 8, 98, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(l[5])\n",
+    "print(l[6])\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "9abe2a8a-8eff-4bd9-8d08-f93674175314",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sudh\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(l[8][\"key1\"])\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "ee8e3386-e607-4d6f-a905-20ce03a7806f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict_keys(['key1', 234])\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(l[8].keys())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "6482e740-1a56-48b2-8c42-8f50db7b8456",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict_values(['sudh', [23, 45, 656]])\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(l[8].values())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5ea01582-5c34-4c36-8b1a-84d3747a3d39",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
